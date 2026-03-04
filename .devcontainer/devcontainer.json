@@ -1,0 +1,42 @@
+// For format details, see https://aka.ms/devcontainer.json
+{
+    "name": "blog-ericdaugherty",
+
+    // Use the Go base image since Hugo is built on Go
+    "image": "mcr.microsoft.com/devcontainers/go:latest",
+
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "installOhMyZsh": true,
+            "configureZshAsDefaultShell": true
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+
+    // Persist Claude Code auth and history across container rebuilds
+    "initializeCommand": "mkdir -p .claude-home",
+    "mounts": [
+        "source=${localWorkspaceFolder}/.claude-home,target=${containerWorkspaceFolder}/.claude-home,type=bind"
+    ],
+    // Install Hugo Extended via go install, then link Claude home
+    "postCreateCommand": "CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest && ln -sf ${containerWorkspaceFolder}/.claude-home /home/vscode/.claude",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "anthropic.claude-code",
+                "eamodio.gitlens",
+                "golang.go",
+                "budparr.language-hugo-vscode"
+            ],
+            "settings": {
+                "github.copilot.enable": {
+                    "*": false
+                },
+                "github.copilot.advanced": {},
+                "extensions.ignoreRecommendations": true
+            }
+        }
+    }
+}

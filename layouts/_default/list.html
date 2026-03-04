@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ range .Paginator.Pages }}
+  <article class="post-summary">
+    <p class="blogdate">{{ .Date.Format "January 2, 2006" }}</p>
+    <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ .Summary }}
+  </article>
+{{ end }}
+{{ template "_internal/pagination.html" . }}
+{{ end }}

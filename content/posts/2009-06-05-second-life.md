@@ -1,0 +1,8 @@
+---
+title: "Second Life"
+date: 2009-06-05T01:06:00Z
+url: /2009/06/second-life.html
+draft: false
+---
+
+Reading through Google Reader today I came across a <a href="http://www.schneier.com/blog/archives/2009/06/im_being_interv.html">post by Bruce Schneier</a> mentioning that he would be interviewed in Second Live today.<div><br /></div><div>My first thought: Second Life? Oh ya, I remember that.  That still exists?</div><div><br /></div><div>Not long ago I couldn't open up my feed reader without endless discussion of Second Life.  Every company was talking about creating a virtual presence.  There were discussions of an alternate currency, virtual economy, money laundering, and of course the <a href="http://www.gamepolitics.com/2006/12/21/second-life-event-interrupted-by-flying-penis-attack">flying penis attacks</a>.</div><div><br /></div><div>Fast forward two years, and my reaction to a post about second Life is 'really, that still exists'?  </div><div><br /></div><div>Things move fast on the web.  What is hot today is not tomorrow (remember <a href="http://www.hotornot.com/">hot or not</a>?).  MySpace was going to take over the world.  Now it is FaceBook and Twitter.</div><div><br /></div><div>As a late comer to <a href="http://twitter.com/eric_daugherty">Twitter</a> and one who still avoids FaceBook, I wonder how we'll view each two years from now.  Granted, both have an adoption rate that I believe surpasses MySpace and Second Life, and comparing Twitter to Second Life is beyond Apples and Oranges, but if we've learned anything in the past decade, it is that nothing lasts forever (or even very long) on the web.</div>

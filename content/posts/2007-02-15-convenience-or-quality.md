@@ -1,0 +1,8 @@
+---
+title: "Convenience or Quality?"
+date: 2007-02-15T20:07:00Z
+url: /2007/02/convenience-or-quality.html
+draft: false
+---
+
+<a href="http://www.37signals.com/svn/">37Signals</a> has a (somewhat) recent entry <a href="http://www.37signals.com/svn/posts/249-convenience-over-quality">Convenience over Quality</a>.  This is a debate I've had several times with people, and I feel that the decision about quality or convenience depends greatly on the medium or function we are talking about.<br /><br />There is no doubt that the trend in audio is towards convenience.  Compressed audio (MP3, etc.) has taken over, and high quality audio formats such as DVD-Audio have been failures.  I think this is largely because listening to music is a secondary activity.  Very few people spend significant amounts of time listening to music as their primary activity.  They listen while they exercise, drive, work, etc.<br /><br />Video, especially TV and movies is different.  People are buying HDTVs in large numbers and paying additional money for HD content from providers (cable, satellite).  People are buying up-converting DVD players, and now Blue-Ray and HD-DVD players are out.  I think the major difference here is that watching TV or a movie is a primary activity.<br /><br />There are always trade offs.  TiVo is a disruptive enough force that initially people traded picture quality for the convince of digital time shifting.  With the evolution of new TiVo devices that is now (mostly) unneccessary.<br /><br />So, for primary activities, quality is very important.  For secondary activities, convenience is much more important.  There are still exceptions in both of these cases, where the change in quality or the change in convenience tips the scales.

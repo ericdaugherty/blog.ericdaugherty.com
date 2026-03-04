@@ -1,0 +1,13 @@
+<div id="header">
+  <div id="header-title">
+    <a href="/"><img src="/images/ericdaugherty.gif" alt="{{ .Site.Title }}"></a>
+  </div>
+  <nav id="header-nav">
+    {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>{{ if not (eq .Name "Open Source") }} - {{ end }}
+    {{ end }}
+  </nav>
+  <div id="header-image">
+    <img src="/images/redrocks.jpg" alt="Red Rocks">
+  </div>
+</div>

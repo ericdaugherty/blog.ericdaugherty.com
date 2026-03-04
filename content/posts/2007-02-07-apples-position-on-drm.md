@@ -1,0 +1,8 @@
+---
+title: "Apple's Position on DRM"
+date: 2007-02-07T19:22:00.001Z
+url: /2007/02/apples-position-on-drm.html
+draft: false
+---
+
+Apple is at an interesting place with DRM.  Some have implied (<a href="http://www.informationweek.com/news/showArticle.jhtml?articleID=191000408">Cory Doctorow</a>) that it is in Apple's best interest to use DRM because it locks users in.  Since iPods already have a huge market penetration, this is a real effect, whether intentional or not.<br /><br />However, Steve Jobs recently suggested that Apple would prefer to distribute the content DRM Free.  This is an interesting position for Apple to take, and one could assume it is simply a bluff. <br /><br />I could give a full analysis of this, but it would simply be a rehash of <a href="http://daringfireball.net/2007/02/reading_between_the_lines">John Gruber's post at Daring Fireball</a>.<br /><br />Go read that.   What I would say is that I personally think the call is more or a bluff than a serious desire to release the music DRM Free.  I think this is a response to the growing chorus of complaints (mostly in Europe) raised to open up Apple's DRM.  I agree with John's analysis that this is unrealistic and something Apple won't do.   This feels like a way to respond to those complaints without really having to do anything.<br /><br />I've been planning on writing a post about how Apple is really very proprietary, and I think even more so than Microsoft.  Cory's position about DRM certainly added fuel to that fire, although John does make some effective arguments against it as a major motivation.  Regardless, I still think my position has some meat, and I'll work on getting that post out. <span style="font-size:100%;"><strong></strong></span>

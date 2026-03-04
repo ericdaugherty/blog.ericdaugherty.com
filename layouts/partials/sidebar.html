@@ -1,0 +1,30 @@
+<div id="sidebar">
+  <p><a href="{{ "index.xml" | absURL }}">Subscribe (RSS)</a></p>
+
+  <p class="sidebar-header">Archive</p>
+  {{ range .Site.RegularPages.GroupByDate "2006" }}
+    <details>
+      <summary>{{ .Key }} ({{ len .Pages }})</summary>
+      <ul>
+      {{ range .Pages.GroupByDate "January" }}
+        <li>{{ .Key }} ({{ len .Pages }})
+          <ul>
+          {{ range .Pages }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+          </ul>
+        </li>
+      {{ end }}
+      </ul>
+    </details>
+  {{ end }}
+
+  {{ range .Site.Params.sidebar_sections }}
+    <p class="sidebar-header">{{ .title }}</p>
+    <ul class="sidebar-links">
+      {{ range .links }}
+        <li><a href="{{ .url }}">{{ .name }}</a></li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</div>

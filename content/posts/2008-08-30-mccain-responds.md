@@ -1,0 +1,8 @@
+---
+title: "McCain Responds"
+date: 2008-08-30T01:53:00.004Z
+url: /2008/08/mccain-responds.html
+draft: false
+---
+
+After my <a href="http://www.ericdaugherty.com/blog/2008/08/political-season-kicks-off.html">post about Obama's VP selection</a>, it's only fair I analyze/mock McCain's as well.<br /><br />McCain picked Sara Palin, the Governor of Alaska, and 'hockey mom'.  It is certainly an interesting pick.  She has no national experience, and is Governor of a pretty unique state.  Granted, national experience isn't a big deal (Governor seems to be a better path to President than Senator, except for this year at least), but Alaska isn't a typical state either.<br /><br />So how about "Old white man picks attractive young female to campaign against young attractive black man."<br /><br />It is certainly a risky pick, and helps McCain resurrect his 'maverick' status.  What is really interesting is the 'experience' question.  I find odd that the Democratic talking points (or at least as I hear them on CNN tonight) are focused on her (lack of) experience.  Is attacking her experience as a Governor and Washington outsider really the best approach when your candidate is running on 'change' and is relatively inexperienced as well?  How different are Obama and Palin?<br /><br />It'll be an interesting few months.  I've been of the opinion that this election was Obama's to lose for a while now, but I'm surprised at how McCain is holding strong/gaining in the polls.  This one could be close (or a blowout, who knows).<br /><br />And I'm watching for the first mention of <a href="http://www.vpilf.com/">VPilf.com</a> in the mainstream press.
