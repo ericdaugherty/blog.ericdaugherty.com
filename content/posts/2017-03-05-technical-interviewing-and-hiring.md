@@ -22,6 +22,7 @@ I have my own thoughts I would like to share, but this isn't really a topic for 
 <h3>
 Why should you care what I think?</h3>
 I've spent a lot of time interviewing and hiring developers across several organizations. For a while I was doing interviews every day. In fact, I remember telling my recruiter that he couldn't schedule more than 2 interviews in a day because by the third interview I found I was no longer effective. I estimate that I've interviewed over 300 candidates, and been the primary decision maker on over half of those. &nbsp;I have been a key member of the interviewing and/or hiring team in two custom software services companies that have grown from 30 or fewer people to over 115 during my tenure. &nbsp;I've done this a lot, and I was there to see my successes and my failures.<br />
+<!--more--> 
 <br />
 I spent over a decade primarily as a software developer. I've written production code in LabView, C++,&nbsp;J++,&nbsp;Java, VB, Perl, C#/.Net, JavaScript, Flex, Scala, Objective-C, and probably more. I've probably written more Java than the rest combined, but I was always learning something new and during the time that I was doing these interviews, I knew what I was talking about. I would like to think I still very technically competent, although many of my current employees enjoy proving me wrong regularly.<br />
 <br />

@@ -19,12 +19,4 @@
     </details>
   {{ end }}
 
-  {{ range .Site.Params.sidebar_sections }}
-    <p class="sidebar-header">{{ .title }}</p>
-    <ul class="sidebar-links">
-      {{ range .links }}
-        <li><a href="{{ .url }}">{{ .name }}</a></li>
-      {{ end }}
-    </ul>
-  {{ end }}
 </div>

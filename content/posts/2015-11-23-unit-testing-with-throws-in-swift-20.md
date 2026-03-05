@@ -12,17 +12,22 @@ However, after I got the project to compile, only one of the test cases ran. &nb
 I did finally figure out that if you your test case has a throws clause, it will be IGNORED.<br />
 <br />
 So:
-<br />
-<pre class="brush: text">testPlaylistNameExtension() throws {
+
+```swift
+testPlaylistNameExtension() throws {
     ...
-}</pre>
+}
+```
 <div class="p1">
 <span class="s1"><br /></span></div>
 <div class="p1">
 <span class="s1">will silently be ignored, which for a test case is a pretty bad scenario. &nbsp;But if you handle the error in the function and change it to:</span></div>
-<pre class="brush: text">testPlaylistNameExtension() {
+
+```swift
+testPlaylistNameExtension() {
     ...
-}</pre>
+}
+```
 <div class="p1">
 <span class="s1"><br /></span></div>
 <div class="p1">

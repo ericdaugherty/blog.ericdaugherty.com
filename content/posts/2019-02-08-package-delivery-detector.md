@@ -37,9 +37,10 @@ I now had everything in place to build out an app to start capturing images. I w
 <br />
 The source code is available on <a href="https://github.com/ericdaugherty/imagefetcher">GitHub</a>.<br />
 <br />
-I wrapped the app in a Docker container and deployed it on my Synology. The Docker image is available on <a href="https://hub.docker.com/r/ericdaugherty/imagefetcher">Docker Hub</a>. Here is a sample Docker run command:<br />
-<br />
-<pre class="brush: text">docker run --restart always \
+I wrapped the app in a Docker container and deployed it on my Synology. The Docker image is available on <a href="https://hub.docker.com/r/ericdaugherty/imagefetcher">Docker Hub</a>. Here is a sample Docker run command:
+
+```
+docker run --restart always \
  -d \
  -e TZ='America/Denver' \
  -v /volume1/imagefetcher:/img \
@@ -50,8 +51,7 @@ I wrapped the app in a Docker container and deployed it on my Synology. The Dock
  -sleepHour 22 \
  -wakeHour 7 \
  -rect 0,400,900,1080
-
-</pre>
+```
 This creates and runs a new Docker container that captures the images, crops them, and stores them locally.<br />
 <br />
 Since packages are generally not delivered in the middle of the night, and the night images are much harder to see, I decided to only run the image fetcher (and eventually the package detector) from 7a to 10p.&nbsp; So I added parameters to the ImageFetcher tool to stop capturing images overnight.<br />
@@ -60,16 +60,18 @@ The <i>-e TZ='America/Denver'</i> parameter sets the timezone for the Docker con
 <br />
 The <i>-v /volume1/imagefetcher:/img</i> parameter maps the directory on the Synology to /img in the container, and then later the <i>-dir /img</i> specifies that the snapshots should be written to /img in the container, which will result in them being stored in /volume1/imagefetcher on the Synology.<br />
 <br />
-If you would prefer to store the images on S3, you can add these parameters:<br />
-<pre class="brush: text">    -e AWS_ACCESS_KEY_ID='&lt;Your Access Key ID' \
-    -e AWS_SECRET_ACCESS_KEY='&lt;Your Access Key Secret&gt;' \
-</pre>
-<br />
+If you would prefer to store the images on S3, you can add these parameters:
+
+```
+    -e AWS_ACCESS_KEY_ID='<Your Access Key ID' \
+    -e AWS_SECRET_ACCESS_KEY='<Your Access Key Secret>' \
+```
 to the docker run command and this parameter:
-<br />
-<pre class="brush: text">    -s3Bucket &lt;bucket name&gt; \
-</pre>
-<br />
+
+```
+    -s3Bucket <bucket name> \
+```
+
 to the imagefetcher command. You can then drop the <i>-v /volume1/imagefetcher:/img</i>&nbsp;and <i>-dir /img</i>, or keep them both and store the images twice!<br />
 <br />
 Now you wait and capture data... I started with a month's worth of images before I trained the first model, but I continue to capture images and plan on training a new model with the larger set.<br />
@@ -113,8 +115,10 @@ The current version supports email as the notification tool.&nbsp; I leveraged <
 <br />
 This tool supports two triggers. The simple approach is to specify a simple interval, ex: <i>-interval 5</i>&nbsp;and it will check every 5 minutes. However, I realized that the Unifi NVR is already doing motion detection, so if I could trigger based on that, it would only evaluate when there was a reason to do so. I came across a cool project by mzak on the Unifi Community Forums. Here is the <a href="https://github.com/mzac/unifi-video-mqtt">GitHub Repo</a>. Mzak realized that the NVR wrote a line to a log file (motion.log) every time motion was detected or ended. I leveraged his work to <a href="https://github.com/ericdaugherty/unifi-nvr-motiondetection">build a go library</a> that would also monitor the log file. To use this, you must map the location of the motion.log file into the docker container. I do so with <i>-v /volume1/docker/unifi-video/logs:/nvr</i> and then point the packagedetector at this location with the <i>-motionLog /nvr/motion.log</i> parameter.<br />
 <br />
-You can run the docker using the following command:<br />
-<pre class="brush: text">sudo docker run \
+You can run the docker using the following command:
+
+```
+sudo docker run \
     --restart always \
     -d \
     -e TZ='America/Denver' \
@@ -133,11 +137,10 @@ You can run the docker using the following command:<br />
     -emailFrom test@example.com \
     -emailTo test@example.com \
     -emailServer email-smtp.us-east-1.amazonaws.com \
-    -emailUser <amazon email="" id="" ses=""> \
-    -emailPass "<amazon password="" ses="">" \
+    -emailUser <amazon ses id> \
+    -emailPass "<amazon ses password>" \
     -emailOnStart true
-</amazon></amazon></pre>
-<br />
+```
 I now receive an email every time a new package is delivered!<br />
 <br />
 Looking ahead, I'm interested in building in support for SMS or even push notifications, although I would also need to build an iOS app for that. I also plan on continuing to refine the model with additional images until I'm confident it will be correct nearly all the time.<br />

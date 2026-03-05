@@ -15,22 +15,59 @@ But I want to take a different angle on this question.&nbsp; I believe that the 
 <span style="font-size: large;">Domain Specific Languages</span><br />
 <a href="http://en.wikipedia.org/wiki/Domain-specific_language">Domain Specific Languages</a>, or DSLs, provide a syntax suited to a specific problem domain.&nbsp; Scala provides a set of features that enable the development of Scala libraries that enable a DSL or pseudo-DSL.<br />
 <br />
-<a href="http://ww.liftweb.net/">Lift</a> is a web framework written in Scala.&nbsp; It provides what I consider a Scala based DSL for creating web applications.&nbsp; Let's examine some sample code from a simple Lift Snippet.&nbsp; (A Lift Snippet is somewhat related to a Servlet):<br />
-<pre class="brush: scala">class A {
-  def snippet (xhtml : NodeSeq) : NodeSeq = bind("A", xhtml, "name" -&gt; Text("The A snippet"))
-}</pre>This example (from Exploring Lift <a href="http://groups.google.com/group/the-lift-book">site</a> - <a href="http://the-lift-book.googlegroups.com/web/master.pdf?gda=I7oRXzwAAAAgy_Zhga4ND3jj1lY6o2DA36IMOX7KRcjdndLx4ePOY5hQBWRFAWHsPl_3piZ--U79Wm-ajmzVoAFUlE7c_fAt">pdf</a>) provides a trivial snippet implementation.&nbsp; It simply replaces the &lt;A:name /&gt; XML tag with "The A snippet" text and would be called by the following XHTML:<br />
-<pre class="brush: xml">&lt;lift:A.snippet&gt;
-  &lt;p&gt;Hello, &lt;A:name /&gt;!&lt;/p&gt;
-&lt;/lift:A.snippet&gt; </pre>There are a few things going on here to make this work.  First, the bind method is statically imported.  The import looks like:<br />
-<pre class="brush: scala">import net.liftweb.util.Helpers._</pre>This imports all the methods defined in the Helpers class into your class, enabling bind to be called without prefix.  The <a href="http://scala-tools.org/mvnsites/liftweb-2.0/framework/scaladocs/net/liftweb/util/Helpers$object.html">Helpers</a> class itself is just a roll-up of 9 other Helper class, so you could instead:<br />
-<pre class="brush: scala">import net.liftweb.util.BindHelpers._</pre>or even:<br />
-<pre class="brush: scala">import net.liftweb.util.BindHelpers.bind</pre>if you want strict control over what you are including.&nbsp; However, the point here is not that you can do static imports, which are possible in Java as well, but that the Lift framework makes heavy use of static imports to help create its DSL.<br />
+<a href="http://ww.liftweb.net/">Lift</a> is a web framework written in Scala.&nbsp; It provides what I consider a Scala based DSL for creating web applications.&nbsp; Let's examine some sample code from a simple Lift Snippet.&nbsp; (A Lift Snippet is somewhat related to a Servlet):
+
+```scala
+class A {
+  def snippet (xhtml : NodeSeq) : NodeSeq = bind("A", xhtml, "name" -> Text("The A snippet"))
+}
+```
+This example (from Exploring Lift <a href="http://groups.google.com/group/the-lift-book">site</a> - <a href="http://the-lift-book.googlegroups.com/web/master.pdf?gda=I7oRXzwAAAAgy_Zhga4ND3jj1lY6o2DA36IMOX7KRcjdndLx4ePOY5hQBWRFAWHsPl_3piZ--U79Wm-ajmzVoAFUlE7c_fAt">pdf</a>) provides a trivial snippet implementation.&nbsp; It simply replaces the &lt;A:name /&gt; XML tag with "The A snippet" text and would be called by the following XHTML:
+
+```xml
+<lift:A.snippet>
+  <p>Hello, <A:name />!</p>
+</lift:A.snippet>
+```
+There are a few things going on here to make this work.  First, the bind method is statically imported.  The import looks like:
+
+```scala
+import net.liftweb.util.Helpers._
+```
+
+This imports all the methods defined in the Helpers class into your class, enabling bind to be called without prefix.  The <a href="http://scala-tools.org/mvnsites/liftweb-2.0/framework/scaladocs/net/liftweb/util/Helpers$object.html">Helpers</a> class itself is just a roll-up of 9 other Helper class, so you could instead:
+
+```scala
+import net.liftweb.util.BindHelpers._
+```
+or even:
+
+```scala
+import net.liftweb.util.BindHelpers.bind
+```
+if you want strict control over what you are including.&nbsp; However, the point here is not that you can do static imports, which are possible in Java as well, but that the Lift framework makes heavy use of static imports to help create its DSL.<br />
 <br />
-The second part requires two important concepts, implicit functions and operator overloading.&nbsp; The bind method has a few overloaded versions, but a typical case uses the following signature:<br />
-<pre class="brush: scala">def bind(namespace : String, xml : NodeSeq, params : BindParam*)</pre>In our simple example, the first two parameters are pretty straight forward, but how does:<br />
-<pre class="brush: scala">"name" -&gt; Text("The A snippet")</pre>Get converted to a BuildParam?&nbsp; The answer is implicit functions and operator overloading.&nbsp; The <a href="http://scala-tools.org/mvnsites/liftweb-2.0/framework/scaladocs/net/liftweb/util/BindHelpers.html">BindHelpers</a> Object (statically imported with Helpers._), contains an implicit method with the following signature:<br />
-<pre class="brush: scala">implicit def strToSuperArrowAssoc(in : String) : SuperArrowAssoc</pre>The <a href="http://scala-tools.org/mvnsites/liftweb-2.0/framework/scaladocs/net/liftweb/util/BindHelpers.SuperArrowAssoc.html">SuperArrowAssoc</a> object defines a method (operator overload) -&gt;.&nbsp; This operator/method is overloaded to take different parameters, including scala.xml.Text.  So in our simple example:<br />
-<pre class="brush: scala">"name" -&gt; Text("The A snippet")</pre>The "name" string is implicitly converted to a SuperArrowAssoc, and the -&gt; method is executed with a scala.xml.Text instance as the parameter, and returns a BindParam, which is then passed to the statically imported bind method.<br />
+The second part requires two important concepts, implicit functions and operator overloading.&nbsp; The bind method has a few overloaded versions, but a typical case uses the following signature:
+
+```scala
+def bind(namespace : String, xml : NodeSeq, params : BindParam*)
+```
+In our simple example, the first two parameters are pretty straight forward, but how does:
+
+```scala
+"name" -> Text("The A snippet")
+```
+Get converted to a BuildParam?&nbsp; The answer is implicit functions and operator overloading.&nbsp; The <a href="http://scala-tools.org/mvnsites/liftweb-2.0/framework/scaladocs/net/liftweb/util/BindHelpers.html">BindHelpers</a> Object (statically imported with Helpers._), contains an implicit method with the following signature:
+
+```scala
+implicit def strToSuperArrowAssoc(in : String) : SuperArrowAssoc
+```
+The <a href="http://scala-tools.org/mvnsites/liftweb-2.0/framework/scaladocs/net/liftweb/util/BindHelpers.SuperArrowAssoc.html">SuperArrowAssoc</a> object defines a method (operator overload) -&gt;.&nbsp; This operator/method is overloaded to take different parameters, including scala.xml.Text.  So in our simple example:
+
+```scala
+"name" -> Text("The A snippet")
+```
+The "name" string is implicitly converted to a SuperArrowAssoc, and the -&gt; method is executed with a scala.xml.Text instance as the parameter, and returns a BindParam, which is then passed to the statically imported bind method.<br />
 <br />
 Got all that?<br />
 <br />

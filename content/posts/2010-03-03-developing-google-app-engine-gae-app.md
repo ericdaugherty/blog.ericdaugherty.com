@@ -7,18 +7,21 @@ draft: false
 
 If you want to develop a Google App Engine (GAE) application using Maven, you can either use the Maven plugin <a href="http://code.google.com/p/maven-gae-plugin/">maven-gae-plugin</a>, which requires non-trivial hacking on your pom.xml, or you can keep your pom clean and create a simple Ant script.<br />
 <br />
-My pom is a simple web application pom, with no specific GAE configuration.&nbsp; I then created a build.xml in my project root that looks like this:<br />
-<pre class="brush: xml">&lt;project&gt;
-  &lt;property name="sdk.dir" location="/opt/appengine-java-sdk-1.3.1" /&gt;
+My pom is a simple web application pom, with no specific GAE configuration.&nbsp; I then created a build.xml in my project root that looks like this:
 
-  &lt;import file="${sdk.dir}/config/user/ant-macros.xml" /&gt;
+```xml
+<project>
+  <property name="sdk.dir" location="/opt/appengine-java-sdk-1.3.1" />
 
-  &lt;target name="runserver" depends=""
-      description="Starts the development server."&gt;
-    &lt;dev_appserver war="target/yourappname-1.0-SNAPSHOT" /&gt;
-  &lt;/target&gt;
+  <import file="${sdk.dir}/config/user/ant-macros.xml" />
 
-&lt;/project&gt;</pre><br />
+  <target name="runserver" depends=""
+      description="Starts the development server.">
+    <dev_appserver war="target/yourappname-1.0-SNAPSHOT" />
+  </target>
+
+</project>
+```
 Using this, you can run your application in the GAE sandbox without having it take over your pom.<br />
 <br />
 You can also have the ant task perform a maven package to insure everything is updated by adding an exec target to the runserver task.<br />

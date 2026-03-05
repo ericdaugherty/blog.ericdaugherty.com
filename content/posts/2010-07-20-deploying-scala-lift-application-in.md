@@ -14,15 +14,21 @@ The following steps assume:<br />
 <li><a href="http://www.scala-ide.org/">Scala-IDE</a> (Scala Plugin) is installed.</li>
 <li>Scala 2.8</li>
 <li>Lift 2.0 (Need the Scala 2.8 Snapshot from <a href="http://scala-tools.org/repo-snapshots/net/liftweb/">Scala-Tools</a>)</li>
-</ul>The first step was to create a standard OSGi Plug-In Project.&nbsp; Then edit the project file to add the Scala Build Command<br />
-<pre class="brush: xml">&lt;buildcommand&gt; 
-  &lt;name&gt;ch.epfl.lamp.sdt.core.scalabuilder&lt;/name&gt;
-&lt;/buildcommand&gt;
-</pre>to buildSpec, and remove the Java Builder<br />
+</ul>The first step was to create a standard OSGi Plug-In Project.&nbsp; Then edit the project file to add the Scala Build Command
+
+```xml
+<buildcommand>
+  <name>ch.epfl.lamp.sdt.core.scalabuilder</name>
+</buildcommand>
+```
+to buildSpec, and remove the Java Builder<br />
 <br />
-Then add the Scala Nature<br />
-<pre class="brush: xml">&lt;nature&gt;ch.epfl.lamp.sdt.core.scalanature&lt;/nature&gt;
-</pre>to natures.  I added both to the top of the respective sections.<br />
+Then add the Scala Nature
+
+```xml
+<nature>ch.epfl.lamp.sdt.core.scalanature</nature>
+```
+to natures.  I added both to the top of the respective sections.<br />
 <br />
 You will then need to reload the Project (Close/Reopen) and it should be Scala-enabled.<br />
 <br />
@@ -48,11 +54,17 @@ You will need the Pax Web WAR Extender bundle and all its dependencies.&nbsp; Th
 <br />
 Once the Pax Web bundles are deployed, you should be able to deploy your bundle.&nbsp; The Pax Web WAR Extender will scan all bundles for a web.xml file and attempt to deploy them if it finds one.<br />
 <br />
-By default it uses the Bundle's Symbolic Name (Bundle-SymbolicName: xxx) as the context root, but you can specify your own by adding the following line to your MANIFEST.MF:<br />
-<pre class="brush: text">Webapp-Context: /
-</pre>to deploy as the root context or<br />
-<pre class="brush: text">Webapp-Context: mycontext
-</pre>to deploy as /mycontext<br />
+By default it uses the Bundle's Symbolic Name (Bundle-SymbolicName: xxx) as the context root, but you can specify your own by adding the following line to your MANIFEST.MF:
+
+```
+Webapp-Context: /
+```
+to deploy as the root context or
+
+```
+Webapp-Context: mycontext
+```
+to deploy as /mycontext<br />
 <br />
 That was all it took to get a sample Lift application up and running.  I can now use the OSGi container to reference other dependencies and continue to build the application in Eclipse.<br />
 <br />

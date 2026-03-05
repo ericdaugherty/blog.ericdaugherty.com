@@ -25,54 +25,64 @@ Now my web application can handle the odd html, png, or other static files if ne
 <br />
 For reference, here are the relevant portions of my config:<br />
 <br />
-Web.xml<br />
-<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"&gt;
+Web.xml
 
-  &lt;filter&gt;
-    &lt;filter-name&gt;UrlRewriteFilter&lt;/filter-name&gt;
-    &lt;filter-class&gt;org.tuckey.web.filters.urlrewrite.UrlRewriteFilter&lt;/filter-class&gt;
-  &lt;/filter&gt;
-  
-  &lt;filter-mapping&gt;
-    &lt;filter-name&gt;UrlRewriteFilter&lt;/filter-name&gt;
-    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
-  &lt;/filter-mapping&gt;
-  
-  &lt;servlet&gt;
-    &lt;servlet-name&gt;SpringMVCServlet&lt;/servlet-name&gt;
-    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
-      &lt;init-param&gt;
-        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-        &lt;param-value&gt;/WEB-INF/your.config.file.location.xml&lt;/param-value&gt;
-      &lt;/init-param&gt;
-    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-  &lt;/servlet&gt;
-  
-  &lt;servlet-mapping&gt;
-    &lt;servlet-name&gt;SpringMVCServlet&lt;/servlet-name&gt;
-    &lt;url-pattern&gt;*.spring&lt;/url-pattern&gt;
-  &lt;/servlet-mapping&gt;
-  
-&lt;/web-app&gt;</pre>urlrewrite.xml<br />
-<pre class="brush: xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.0//EN"
-  "http://tuckey.org/res/dtds/urlrewrite3.0.dtd"&gt;
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
-&lt;urlrewrite&gt;
-  &lt;rule&gt;
-    &lt;from&gt;/$&lt;/from&gt;
-    &lt;to type="forward"&gt;home&lt;/to&gt;
-  &lt;/rule&gt;
+  <filter>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+  </filter>
 
-  &lt;rule&gt;
-    &lt;from&gt;^([^?]*)/([^?/\.]+)(\?.*)?$&lt;/from&gt;
-    &lt;to last="true"&gt;$1/$2.spring$3&lt;/to&gt;
-  &lt;/rule&gt;
-  
-&lt;/urlrewrite&gt;</pre>Sample Controller<br />
-<pre class="brush: java">@Controller
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>SpringMVCServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      <init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/your.config.file.location.xml</param-value>
+      </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SpringMVCServlet</servlet-name>
+    <url-pattern>*.spring</url-pattern>
+  </servlet-mapping>
+
+</web-app>
+```
+urlrewrite.xml
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.0//EN"
+  "http://tuckey.org/res/dtds/urlrewrite3.0.dtd">
+
+<urlrewrite>
+  <rule>
+    <from>/$</from>
+    <to type="forward">home</to>
+  </rule>
+
+  <rule>
+    <from>^([^?]*)/([^?/\.]+)(\?.*)?$</from>
+    <to last="true">$1/$2.spring$3</to>
+  </rule>
+
+</urlrewrite>
+```
+Sample Controller
+
+```java
+@Controller
 @RequestMapping("/foo")
 public class SimpleDataController {
 
@@ -80,4 +90,5 @@ public class SimpleDataController {
   public ModelAndView bar() {
     ...
   }
-}</pre>
+}
+```

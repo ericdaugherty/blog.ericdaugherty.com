@@ -11,40 +11,45 @@ The Lift Demo site provides a <a href="http://demo.liftweb.net/chat">good overvi
 <br />
 The render method is similar to the render method on any snippet.&nbsp; It usually has a bind method that replaces XML tags in the template with dynamic content.&nbsp; This can be visible HTML, JavaScript methods that will be used during updates, or a combination of the two. <br />
 <br />
-The <a href="http://demo.liftweb.net/chat">Comet Chat example</a> has the following render method:<br />
-<br />
-<pre class="brush: scala">// display a line
+The <a href="http://demo.liftweb.net/chat">Comet Chat example</a> has the following render method:
+
+```scala
+// display a line
 private def line(c: ChatLine) = bind("list", singleLine,
-                "when" -&gt; hourFormat(c.when),
-                "who" -&gt; c.user,
-                "msg" -&gt; c.msg)
+                "when" -> hourFormat(c.when),
+                "who" -> c.user,
+                "msg" -> c.msg)
 
 // display a list of chats
-private def displayList(in: NodeSeq): NodeSeq = 
+private def displayList(in: NodeSeq): NodeSeq =
 chats.reverse.flatMap(line)
 
-override def render = 
+override def render =
   bind("chat", bodyArea,
-       "name" -&gt; userName,
+       "name" -> userName,
        AttrBindParam("id", Text(infoId), "id"),
-       "list" -&gt; displayList _)
-</pre>Here, the render method sets the chat:name tag to userName, and the chat:list tag is processed by the line method (via displayList).<br />
+       "list" -> displayList _)
+```
+Here, the render method sets the chat:name tag to userName, and the chat:list tag is processed by the line method (via displayList).<br />
 <br />
-The actor methods are where it gets interesting.&nbsp; The actual method can be one of low(med/high)Priority or messageHandler.&nbsp; These methods define PartialFunctions that can be used to handle incoming messages.&nbsp; There are two basic approaches that can be used from here.&nbsp; The first approach is to update some internal state and force the render method to replace the existing content.&nbsp; This would look something like:<br />
-<br />
-<pre class="brush: scala">var messageText : List[String] = Nil 
+The actor methods are where it gets interesting.&nbsp; The actual method can be one of low(med/high)Priority or messageHandler.&nbsp; These methods define PartialFunctions that can be used to handle incoming messages.&nbsp; There are two basic approaches that can be used from here.&nbsp; The first approach is to update some internal state and force the render method to replace the existing content.&nbsp; This would look something like:
+
+```scala
+var messageText : List[String] = Nil
 
 override def messageHandler = {
-    case message : String =&gt; messageText ::= message; reRender(false)
+    case message : String => messageText ::= message; reRender(false)
 }
-</pre><br />
+```
 Assuming you have a render method that takes the messageText and renders it out as HTML, the page will reflect the contents of messageText, and will be updated each time a message is received.&nbsp; However, if the amount of changes are small relative to the rendered block, or you are creating an ever-increasing list of content, this can be inefficient.<br />
 <br />
-The second approach for the actor message methods is to call a JavaScript method on the client with the updated information.&nbsp; This would look something like:<br />
-<br />
-<pre class="brush: scala">override def messageHandler = {
-  case message : String =&gt; partialUpdate(OnLoad(AppendHtml("logContents", &lt;div&gt;{message}&lt;/div&gt;) &amp; JsRaw("autoScroll();")))</pre><pre class="brush: scala">}
-</pre><br />
+The second approach for the actor message methods is to call a JavaScript method on the client with the updated information.&nbsp; This would look something like:
+
+```scala
+override def messageHandler = {
+  case message : String => partialUpdate(OnLoad(AppendHtml("logContents", <div>{message}</div>) & JsRaw("autoScroll();")))
+}
+```
 In this example, the partialUpdate method is used to push a string of JavaScript Commands to the web page.&nbsp; AppendHtml is a shortcut to a jQuery method to add HTML to a specific element. This is combined with a call to the autoScroll method which we assume is already defined on the page and acts on the newly updated information in some way (i.e. automatically scrolling the div to the bottom so the updated HTML is visible).&nbsp; This does not trigger a new call to the render method.<br />
 <br />
 Note that the appendHtml method is defined net.liftweb.http.js.jquery.JqJsCmds instead of net.liftweb.http.js.JsCmds as it is a bridge to jQuery (hence the Jq prefix).&nbsp; <br />

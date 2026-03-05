@@ -3,5 +3,9 @@
   <h1>{{ .Title }}</h1>
   <p class="blogdate">{{ .Date.Format "January 2, 2006" }}</p>
   {{ .Content }}
+  <nav class="post-nav">
+    {{ with .NextInSection }}<a class="post-nav-newer" href="{{ .RelPermalink }}">&larr; Newer Post</a>{{ end }}
+    {{ with .PrevInSection }}<a class="post-nav-older" href="{{ .RelPermalink }}">Older Post &rarr;</a>{{ end }}
+  </nav>
 </article>
 {{ end }}

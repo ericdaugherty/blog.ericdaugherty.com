@@ -24,8 +24,7 @@ I found GopherJS to be an interesting project, but a pretty indirect way to get 
 <br /></div>
 <div>
 The eawsy team released their new tool earlier this year and it seems to be the cleanest approach. &nbsp;The overhead between the Python shim and your Go code is clean and fast. &nbsp;They utilize a Docker container to build the necessary bridges from Python to Go, resulting in very fast execution. &nbsp;You can write log messages to the Lambda console using log.Printf. And it is FAST. The HelloWorld skill runs in sub-millisecond times!</div>
-<div>
-<br /></div>
+<!--more--> 
 <div>
 To build Alexa skills in Go on Lambda, we still need an SDK. &nbsp;Amazon publishes SDKs for <a href="https://github.com/amzn/alexa-skills-kit-java">Java</a>&nbsp;and <a href="https://github.com/amzn/alexa-skills-kit-js">JavaScript</a>&nbsp;but not for Go. &nbsp;So I ported the Java SDK into Go as <a href="https://github.com/ericdaugherty/alexa-skills-kit-golang">ericdaugherty/alexa-skills-kit-golang</a>&nbsp; While this does not (yet) have the full depth of the Amazon SDK, it does enable you to build simple Alexa skills using Go and deploy them on Lambda.</div>
 <div>

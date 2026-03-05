@@ -1,13 +1,13 @@
-<div id="header">
-  <div id="header-title">
-    <a href="/"><img src="/images/ericdaugherty.gif" alt="{{ .Site.Title }}"></a>
-  </div>
-  <nav id="header-nav">
-    {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}">{{ .Name }}</a>{{ if not (eq .Name "Open Source") }} - {{ end }}
-    {{ end }}
-  </nav>
-  <div id="header-image">
-    <img src="/images/redrocks.jpg" alt="Red Rocks">
-  </div>
+<div class="site-banner">
+  <img src="/images/redrocks.jpg" alt="Red Rocks">
 </div>
+<nav class="site-nav">
+  <div class="nav-wrapper">
+    <a href="https://www.ericdaugherty.com/" class="site-title">{{ .Site.Title }}</a>
+    <div class="nav-links">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </div>
+  </div>
+</nav>

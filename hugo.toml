@@ -1,7 +1,7 @@
 baseURL = 'https://blog.ericdaugherty.com/'
 languageCode = 'en-us'
 title = 'EricDaugherty.com'
-paginate = 10
+paginate = 5
 summaryLength = 70
 
 [markup]
@@ -34,14 +34,9 @@ summaryLength = 70
     url = 'https://www.ericdaugherty.com/java/mailserver/'
 
 [[menus.main]]
-  name = 'EricDaugherty.com'
-  url = 'https://www.ericdaugherty.com/'
-  weight = 1
-
-[[menus.main]]
   name = 'Blog'
   url = '/'
-  weight = 2
+  weight = 1
 
 [[menus.main]]
   name = 'Apps'

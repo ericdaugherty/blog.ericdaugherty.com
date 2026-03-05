@@ -5,8 +5,7 @@ url: /2015/08/site-migration.html
 draft: false
 ---
 
-After hosting this site on GoDaddy for many years, I've decided to migrate it to Amazon via S3. &nbsp;Amazon has some great features for hosting static websites, although I've gone 'bare bones' to start. &nbsp;I'm just hosting using an S3 bucket. &nbsp;I'm using the <a href="http://wwwizer.com/naked-domain-redirect">wwwizer Naked Redirect service</a> to redirect ericdaugherty.com to www.ericdaugherty.com, and then hosting the site out of a S3 bucket.<div>
-<br /></div>
+After hosting this site on GoDaddy for many years, I've decided to migrate it to Amazon via S3. &nbsp;Amazon has some great features for hosting static websites, although I've gone 'bare bones' to start. &nbsp;I'm just hosting using an S3 bucket. &nbsp;I'm using the <a href="http://wwwizer.com/naked-domain-redirect">wwwizer Naked Redirect service</a> to redirect ericdaugherty.com to www.ericdaugherty.com, and then hosting the site out of a S3 bucket.
 <div>
 Amazon has a DNS server (Route 53) and CDN (CloudFront) that are easy and inexpensive to use, but I don't think I need them yet. &nbsp;For now, I'm still using GoDaddy's DNS Server and the wwwizer 'hack' instead of Route 53.</div>
 <div>

@@ -11,6 +11,7 @@ While I've been primarily living in the mobile world recently, I've been intrigu
 <br />
 AWS continues to add interesting services and features. &nbsp;I recently&nbsp;<a href="http://blog.ericdaugherty.com/2015/08/site-migration.html">moved my website from GoDaddy to host on S3</a>. &nbsp;This really started my thinking about living in a 'serverless world'. &nbsp;While practically speaking hosting on S3 isn't really all that different than virtual hosting at GoDaddy, it is really just scratching the surface. &nbsp;You can now build pretty interesting applications without running a server (virtual or otherwise).<br />
 <br />
+<!--more--> 
 I begin to think about how you could build a full application using the AWS stack without an EC2 instance. &nbsp;Of course, a ton of thought has already been put into this. &nbsp;The <a href="https://github.com/serverless/serverless-starter">Serverless</a> tool allows you to easily configure Amazon to use the API Gateway with Lambda to deploy functional APIs. &nbsp;There is also a website dedicated to <a href="https://serverlesscode.com/">living serverless</a>.<br />
 <br />
 I've also been working on a few Amazon Alexa applications for the Echo, which also uses Lambda as the preferred deployment program.<br />
@@ -31,20 +32,24 @@ Here is the full lifecycle:<br />
 <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5MpIMtsnyRL0arVtmU-2Cow1tvWBSqn_dg4zbEoCH7tsjluewJWYuv3ifAHOz7IsBbrCoO_UwiqWs63pFCVrwoefYt2WaFZ-valBdUy9PA107kvu8LiydlSSFJjQKl-mXrayqRflTdOc/s1600/Screen+Shot+2016-03-11+at+4.15.37+PM.png" imageanchor="1"><img border="0" height="219" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5MpIMtsnyRL0arVtmU-2Cow1tvWBSqn_dg4zbEoCH7tsjluewJWYuv3ifAHOz7IsBbrCoO_UwiqWs63pFCVrwoefYt2WaFZ-valBdUy9PA107kvu8LiydlSSFJjQKl-mXrayqRflTdOc/s640/Screen+Shot+2016-03-11+at+4.15.37+PM.png" width="640" /></a><br />
 <br />
 <br />
-I decided to use Query String parameters to pass data to the function, so you could just cut/paste from the URL you wanted converted. &nbsp;You can define the query strings in the Method Request section, but this just seems to allow you to use them when testing and isn't required. &nbsp;I did have to map the query parameters into the Lambda, so I created an application/json mapping (since the Lambda function consumes JSON). &nbsp;The mapping function is:<br />
-<pre class="brush: text">{
-&nbsp; &nbsp; "eventId" : "$input.params('EventID')",
-&nbsp; &nbsp; "groupId" : "$input.params('GroupID')",
-&nbsp; &nbsp; "gender" &nbsp;: "$input.params('Gender')",
-&nbsp; &nbsp; "age" &nbsp; &nbsp; : "$input.params('Age')"
+I decided to use Query String parameters to pass data to the function, so you could just cut/paste from the URL you wanted converted. &nbsp;You can define the query strings in the Method Request section, but this just seems to allow you to use them when testing and isn't required. &nbsp;I did have to map the query parameters into the Lambda, so I created an application/json mapping (since the Lambda function consumes JSON). &nbsp;The mapping function is:
+
+```
+{
+    "eventId" : "$input.params('EventID')",
+    "groupId" : "$input.params('GroupID')",
+    "gender"  : "$input.params('Gender')",
+    "age"     : "$input.params('Age')"
 }
-</pre>
-<br />
+```
 This maps the Query String Parameters using their names (again, as used on gotsport.com so you can cut and paste) into JSON values that match those used by me gotsport-scraper tool. &nbsp;This is then passed to the Lambda function.<br />
 <br />
-The Lambda function runs, fetching the requested URL, scraping it, and returning a JSON value. &nbsp;However, the lambda_proc function returns both an error value and a data value containing the results of the Lambda function. &nbsp;I wanted to map the output to just contain the JSON representing the schedule. &nbsp;So in the Integration Response step in the lifecycle, I used the application/json mapping function:<br />
-<pre class="brush: text">#set($inputRoot = $input.path('$'))
-$input.json('$.data')</pre>
+The Lambda function runs, fetching the requested URL, scraping it, and returning a JSON value. &nbsp;However, the lambda_proc function returns both an error value and a data value containing the results of the Lambda function. &nbsp;I wanted to map the output to just contain the JSON representing the schedule. &nbsp;So in the Integration Response step in the lifecycle, I used the application/json mapping function:
+
+```
+#set($inputRoot = $input.path('$'))
+$input.json('$.data')
+```
 This just extracts the data element from the JSON returned from the Lambda function and passes it back as the HTTP Response Body.<br />
 <br />
 The proper approach in the Integration Response step is to use a RegEx to determine if an error occurred or not, and return the proper HTTP response code and appropriate body. &nbsp;For now I'm assuming a 200 response with valid data.<br />

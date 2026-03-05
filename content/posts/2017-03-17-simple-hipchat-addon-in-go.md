@@ -9,11 +9,12 @@ We use HipChat at work to stay connected. It works well and has some fun plugins
 <br />
 <b>THEY GAME THE SYSTEM.</b><br />
 <br />
-One of the more interesting hacks they discovered is to use the 'find and replace' functionality built into HipChat to secretly give (or more likely take) karma to/from another person. The proper usage of the Find/Replace functionality&nbsp;is something like:<br />
-<pre class="brush: text">&gt; I can typo good.
-&gt; s/typo/type
-</pre>
-<br />
+One of the more interesting hacks they discovered is to use the 'find and replace' functionality built into HipChat to secretly give (or more likely take) karma to/from another person. The proper usage of the Find/Replace functionality&nbsp;is something like:
+
+```
+> I can typo good.
+> s/typo/type
+```
 The first line would be a typo that you made, and the second line allows you to 'fix' the typo. The key part here is that the second line modifies the first line and is not visible to any other users.<br />
 <br />
 Who could let this fun discovery go unused? Not our team! Our chats were quickly filled with Karma Ninjas giving and taking karma from behind a thin veil of secrecy.<br />

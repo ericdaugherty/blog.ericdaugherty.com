@@ -12,8 +12,12 @@ In a <a href="http://blog.ericdaugherty.com/2010/01/getting-started-with-granite
 I found that GraniteDS 2.1 did support better Spring integration.  You can see a blog post <a href="http://graniteds.blogspot.com/2009/11/new-in-graniteds-210-rc1-simplified.html">here</a> that describes the process, or their <a href="http://www.graniteds.org/confluence/display/DOC21/2.+Spring+Services">updated documentation</a>.&nbsp; Note that the blog post seems to be somewhat out of date.&nbsp; One issue is the schema URL:&nbsp; <br />
 http://www.graniteds.org/config/granite-config-2.1.xsd in the blog instead of http://www.graniteds.org/public/dtd/2.1.0/granite-config-2.1.xsd.<br />
 <br />
-The BlazeDS approach has a good overview <a href="http://ria.dzone.com/articles/introduction-spring-blazeds">here</a>, and the <a href="http://static.springsource.org/spring-flex/docs/1.0.x/reference/html/index.html">documentation</a> is pretty good too.&nbsp; In my case, I used the @RemotingDestination annotation on my service beans instead of adding:<br />
-<pre class="brush: xml">&lt;flex:remoting-destination /&gt;</pre>to the Spring config as I'm using auto-wiring for most of my beans. <br />
+The BlazeDS approach has a good overview <a href="http://ria.dzone.com/articles/introduction-spring-blazeds">here</a>, and the <a href="http://static.springsource.org/spring-flex/docs/1.0.x/reference/html/index.html">documentation</a> is pretty good too.&nbsp; In my case, I used the @RemotingDestination annotation on my service beans instead of adding:
+
+```xml
+<flex:remoting-destination />
+```
+to the Spring config as I'm using auto-wiring for most of my beans. <br />
 <br />
 There are a couple of things that bothered me about the GraniteDS approach as opposed to the BlazeDS approach.<br />
 <br />
