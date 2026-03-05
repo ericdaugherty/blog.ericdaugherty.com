@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<div class="archive">
+{{ range .Site.RegularPages.GroupByDate "2006" }}
+  <details>
+    <summary>{{ .Key }} ({{ len .Pages }})</summary>
+    <ul>
+    {{ range .Pages.GroupByDate "January" }}
+      <li>{{ .Key }} ({{ len .Pages }})
+        <ul>
+        {{ range .Pages }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        </ul>
+      </li>
+    {{ end }}
+    </ul>
+  </details>
+{{ end }}
+</div>
+{{ end }}

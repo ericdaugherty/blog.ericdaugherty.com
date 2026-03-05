@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ range first 5 .Site.RegularPages }}
+{{ range .Paginator.Pages }}
   <article class="post-summary">
     <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <p class="blogdate">{{ .Date.Format "January 2, 2006" }}</p>
@@ -7,4 +7,9 @@
     {{ if .Truncated }}<p class="read-more"><a href="{{ .RelPermalink }}">Read More</a></p>{{ end }}
   </article>
 {{ end }}
+{{ template "_internal/pagination.html" . }}
+<p class="bottom-links">
+  <a href="{{ "archive/" | absURL }}">Archive</a> &middot;
+  <a href="{{ "index.xml" | absURL }}">Subscribe (RSS)</a>
+</p>
 {{ end }}

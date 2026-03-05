@@ -270,17 +270,14 @@ hr {
 }
 
 #content {
-    max-width: 900px;
+    max-width: 720px;
     margin: 0 auto;
     padding: 3rem 2rem;
-    display: flex;
-    gap: 3rem;
 }
 
 @media screen and (max-width: 800px) {
     #content {
         padding: 2.25rem 2rem;
-        flex-direction: column;
     }
 }
 
@@ -291,9 +288,7 @@ hr {
 }
 
 #main {
-    flex: 1 1 0;
     min-width: 0;
-    max-width: 600px;
 }
 
 /**
@@ -384,57 +379,26 @@ article h1 {
 }
 
 /**
- * Sidebar
+ * Bottom Links
  */
-#sidebar {
-    width: 220px;
-    flex-shrink: 0;
+.bottom-links {
+    text-align: center;
     font-size: 14px;
-    padding-top: 0.5rem;
-}
-
-.sidebar-header {
-    font-weight: 600;
+    color: #6b6b6b;
     margin-top: 1.5rem;
-    margin-bottom: 0.25rem;
-    color: #1a1a1a;
+    padding-top: 1rem;
 }
 
-.sidebar-links {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-.sidebar-links li {
+/**
+ * Archive Page
+ */
+.archive details {
     margin-bottom: 0.25rem;
 }
 
-#sidebar details {
-    margin-bottom: 0.25rem;
-}
-
-#sidebar details summary {
+.archive details summary {
     cursor: pointer;
     color: #1a1a1a;
-}
-
-#sidebar ul {
-    padding-left: 1.25rem;
-    margin-bottom: 0.25rem;
-    margin-left: 0;
-}
-
-#sidebar ul li {
-    margin-bottom: 0.15rem;
-}
-
-@media screen and (max-width: 800px) {
-    #sidebar {
-        width: 100%;
-        border-top: 1px solid #e5e5e5;
-        padding-top: 1.5rem;
-    }
 }
 
 /**
@@ -459,18 +423,35 @@ article h1 {
  * Pagination
  */
 .pagination {
-    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
     padding: 1.5rem 0;
+    margin-left: 0;
 }
 
-.pagination a,
-.pagination span {
-    margin: 0 0.25rem;
+.page-item .page-link {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 14px;
+    color: #B54A3C;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.page-item .page-link:hover {
+    text-decoration: underline;
 }
 
 .page-item.active .page-link {
     font-weight: 600;
     color: #1a1a1a;
+}
+
+.page-item.disabled .page-link {
+    color: #ccc;
+    pointer-events: none;
 }
 
 /**
