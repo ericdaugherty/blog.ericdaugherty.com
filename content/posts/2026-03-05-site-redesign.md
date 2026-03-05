@@ -2,6 +2,7 @@
 date = '2026-03-05T03:13:01Z'
 draft = false
 title = 'Site Redesign and Migration'
+url = '/posts/2026-03-05-site-redesign/'
 +++
 
 My old site design was getting a bit old and it was time for a cleanup. Now that AI is all the rage I used Claude Code to come up with a new site design and applied it.

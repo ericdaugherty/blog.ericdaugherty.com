@@ -48,5 +48,8 @@ summaryLength = 70
   url = 'https://www.ericdaugherty.com/dev/'
   weight = 4
 
+[permalinks]
+  posts = '/:year/:month/:slug.html'
+
 [outputs]
   home = ['HTML', 'RSS']
