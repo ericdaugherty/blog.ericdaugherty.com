@@ -39,8 +39,7 @@ jobs:
       - name: Build
         run: |
           hugo build \
-            --gc \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --gc
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
