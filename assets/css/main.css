@@ -198,7 +198,7 @@ hr {
 }
 
 .nav-wrapper {
-    max-width: 900px;
+    max-width: 720px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
