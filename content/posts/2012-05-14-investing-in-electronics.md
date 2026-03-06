@@ -13,7 +13,7 @@ Printers</h3>
 First, while it is no longer with me, I want to celebrate again my HP 4L Laser Printer. &nbsp;I finally retired the printer in 2008 after 14 years of great service. &nbsp;I wrote about its <a href="http://blog.ericdaugherty.com/2008/04/hp-laserjet-4l-retired.html">retirement here</a>.<br />
 <br />
 <div class="separator" style="clear: both; text-align: center;">
-<a href="http://www.ericdaugherty.com/blog/uploaded_images/DSC_2261-Edit-793502.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://www.ericdaugherty.com/blog/uploaded_images/DSC_2261-Edit-793502.jpg" /></a></div>
+<a href="/images/blog/DSC_2261-Edit-793502.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="/images/blog/DSC_2261-Edit-793502.jpg" /></a></div>
 <br />
 <br />
 The HP 4L was replaced by a Dell 1320c, with a wired network connection. &nbsp;It has served well for 4 years now, and will hopefully continue for another 10. &nbsp;It was more expensive then an ink jet, but if it continues to serve it will be well worth it.<br />
