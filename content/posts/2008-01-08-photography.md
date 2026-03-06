@@ -4,5 +4,28 @@ date: 2008-01-08T04:53:00Z
 url: /2008/01/photography.html
 draft: false
 ---
+I've picked up a new hobby, Photography.  We (my wife and I) purchased a new Nikon D40 and 18-200 VR lens to get started, and so far we are both really enjoying it.
 
-I've picked up a new hobby, Photography.  We (my wife and I) purchased a new Nikon D40 and 18-200 VR lens to get started, and so far we are both really enjoying it.<br /><br />We previously used a Canon Powershot S500 (5 MP Point and Shoot), and while we took a ton of pictures with it, we were always frustrated with shutter delay.  We missed a lot of great shots while the camera metered, focused, and did whatever else it did before it would actually take the shot.<br /><br />Out of the box just shooting the D40 in full auto mode was much better.  The 18-200 lens gives an amazing range of wide/zoom opportunities previously unavailable to us.  However, it was when we learned to go beyond the auto mode that we really improved our our results.<br /><br />One of the keys to helping us learn was the book 'Understanding Exposure' by Bryan Peterson.  It walks through the key controls (Aperture, Shutter Speed, and ISO) and provides great examples of what you can achieve and how these controls can be used to archive the 'creatively correct' exposure.<br /><br />We recently went to Sanibel Island, Florida for vacation and it served as a great opportunity to really exercise the potential of the camera and get some really fun practice time in.  By the end we were both able to successfully shoot in full manual mode to achieve the results we wanted.<br /><br />I've been using Tabblo on the recommendation of a friend to post some of my shots.  It is a little more than the basic photo sharing sites as it allows you to create a 'page' of pictures of different sizes and interspersed comments.  You can see some of my shots from Sanibel Island below (click images to see full version).<br /><br />We have a ton to learn but we're looking forward to spending more time and taking many great shots.<br /><br /><br /><div class='tabblo'><br /><div><a href='http://www.tabblo.com/studio/stories/shared/22849/pksr6utmy7aj9c8'><br /><img src="http://www.tabblo.com/studio/image/public/178959/46e4eb4d9c7a5fdca7f973fabd5ecb86.jpg" alt='Tabblo: Wildlife on Sanibel Island' height='415' width='415' border='0'/><br /></a></div><br /></div><br /><br /><div class='tabblo'><br /><div><a href='http://www.tabblo.com/studio/stories/shared/22848/7tljg1a0mbnrv8d'><br /><img src="http://www.tabblo.com/studio/image/public/178960/afd7bb1634f8494da3e40c226a99b7e2.jpg" alt='Tabblo: Sunset on Sanibel Island' height='415' width='415' border='0'/><br /></a></div><br /></div>
+We previously used a Canon Powershot S500 (5 MP Point and Shoot), and while we took a ton of pictures with it, we were always frustrated with shutter delay.  We missed a lot of great shots while the camera metered, focused, and did whatever else it did before it would actually take the shot.
+
+Out of the box just shooting the D40 in full auto mode was much better.  The 18-200 lens gives an amazing range of wide/zoom opportunities previously unavailable to us.  However, it was when we learned to go beyond the auto mode that we really improved our our results.
+
+One of the keys to helping us learn was the book 'Understanding Exposure' by Bryan Peterson.  It walks through the key controls (Aperture, Shutter Speed, and ISO) and provides great examples of what you can achieve and how these controls can be used to archive the 'creatively correct' exposure.
+
+We recently went to Sanibel Island, Florida for vacation and it served as a great opportunity to really exercise the potential of the camera and get some really fun practice time in.  By the end we were both able to successfully shoot in full manual mode to achieve the results we wanted.
+
+I've been using Tabblo on the recommendation of a friend to post some of my shots.  It is a little more than the basic photo sharing sites as it allows you to create a 'page' of pictures of different sizes and interspersed comments.  You can see some of my shots from Sanibel Island below (click images to see full version).
+
+We have a ton to learn but we're looking forward to spending more time and taking many great shots.
+
+<div class='tabblo'>
+<div><a href='http://www.tabblo.com/studio/stories/shared/22849/pksr6utmy7aj9c8'>
+<img src="http://www.tabblo.com/studio/image/public/178959/46e4eb4d9c7a5fdca7f973fabd5ecb86.jpg" alt='Tabblo: Wildlife on Sanibel Island' height='415' width='415' border='0'/>
+</a></div>
+</div>
+
+<div class='tabblo'>
+<div><a href='http://www.tabblo.com/studio/stories/shared/22848/7tljg1a0mbnrv8d'>
+<img src="http://www.tabblo.com/studio/image/public/178960/afd7bb1634f8494da3e40c226a99b7e2.jpg" alt='Tabblo: Sunset on Sanibel Island' height='415' width='415' border='0'/>
+</a></div>
+</div>

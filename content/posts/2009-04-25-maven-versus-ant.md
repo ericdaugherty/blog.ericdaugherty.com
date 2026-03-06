@@ -4,5 +4,21 @@ date: 2009-04-25T16:24:00.002Z
 url: /2009/04/maven-versus-ant.html
 draft: false
 ---
+The Java world has two popular build tools, <a href="http://ant.apache.org/">Ant</a> and <a href="http://maven.apache.org/">Maven</a>.  I've been using Ant for as long as I can remember.  Maven is a newer tool aimed at addressing some of the pains of Ant and also providing an more complete experience.
 
-The Java world has two popular build tools, <a href="http://ant.apache.org/">Ant</a> and <a href="http://maven.apache.org/">Maven</a>.  I've been using Ant for as long as I can remember.  Maven is a newer tool aimed at addressing some of the pains of Ant and also providing an more complete experience.<br /><br />For a long time I avoided Maven.  I tried out Maven 1.0 early on and was frustrated with the lack of control and underdeveloped eco-system.  With its dependency managment system, dealing with dependencies that are not in public repositories is annoying, and early on most libraries didn't have versions in the public repositories.<br /><br />I'm working on a Scala port of my iTunes Export application and I had to decide how I wanted to build the project.  Here are the pros/cons I saw:<br /><br />Ant<br /><ul><li>Well Known - I know how it works, and there are tons of examples</li><li>Malleable - I can make it do what I want.  I never have to fight the tool to make it work the way i want.</li></ul>Maven<br /><ul><li>Less boilerplate code - Maven provide you many features, like compling and assembling packages 'for free'.  </li><li>Dependency Management - Project dependencies are automatically downloaded from public repositories and your releases can be uploaded to public repositories for distribution.</li><li>Its the new Black - It is the current 'standard'.</li></ul>For iTunesExport Scala I'm using Ant, although I am providing a Maven pom file as well for developers that prefer Maven.  The basic Maven project was easy to setup, but I found myself struggling to make other things work, like unit testing (It doesn't work out of the box with ScalaTest) and packaging.  In Ant, I already have predefined targets for most of what I want, and it takes just a few seconds to tweak to my exact desires.<br /><br />For larger projects, I think Maven is worthwhile.  The dependency managment is important as projects grow and the Maven ecosystem is large and growing.  For small projects, I'm sticking with Ant.
+For a long time I avoided Maven.  I tried out Maven 1.0 early on and was frustrated with the lack of control and underdeveloped eco-system.  With its dependency managment system, dealing with dependencies that are not in public repositories is annoying, and early on most libraries didn't have versions in the public repositories.
+
+I'm working on a Scala port of my iTunes Export application and I had to decide how I wanted to build the project.  Here are the pros/cons I saw:
+
+Ant
+
+- Well Known - I know how it works, and there are tons of examples
+- Malleable - I can make it do what I want.  I never have to fight the tool to make it work the way i want.
+Maven
+
+- Less boilerplate code - Maven provide you many features, like compling and assembling packages 'for free'.
+- Dependency Management - Project dependencies are automatically downloaded from public repositories and your releases can be uploaded to public repositories for distribution.
+- Its the new Black - It is the current 'standard'.
+For iTunesExport Scala I'm using Ant, although I am providing a Maven pom file as well for developers that prefer Maven.  The basic Maven project was easy to setup, but I found myself struggling to make other things work, like unit testing (It doesn't work out of the box with ScalaTest) and packaging.  In Ant, I already have predefined targets for most of what I want, and it takes just a few seconds to tweak to my exact desires.
+
+For larger projects, I think Maven is worthwhile.  The dependency managment is important as projects grow and the Maven ecosystem is large and growing.  For small projects, I'm sticking with Ant.

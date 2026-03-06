@@ -4,7 +4,6 @@ date: 2022-05-21T18:45:00Z
 url: /2022/05/go-web-server-using-lambda-function-urls.html
 draft: false
 ---
-
 It has been possible to use Lambda Functions to host Go (Golang) Web Servers for years. I wrote about a [project doing this back in 2016](https://blog.ericdaugherty.com/2016/03/lamda-go-and-gotsport-via-api-gateway.html). More recently, the [github.com/apex/gateway](http://github.com/apex/gateway) project provided a drop in replacement for net/http's ListenAndServe function that supported [AWS REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html), and later the [AWS HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html).
 
 Amazon recently released the ability to access a [Lambda Function directly via URL](https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls.html), without needing to configure the REST APIs or HTTP APIs. This remove an extra layer of configuration, complexity, and potentially cost, for deployments.

@@ -4,32 +4,46 @@ date: 2011-06-03T16:42:00Z
 url: /2011/06/my-thoughts-on-groupon.html
 draft: false
 ---
+There is much&nbsp;hubbub&nbsp;around the internet yesterday and today about Groupon's announced IPO. &nbsp;With their <a href="http://sec.gov/Archives/edgar/data/1490281/000104746911005613/a2203913zs-1.htm">public S-1</a>&nbsp;we now have a window into their business, plans, and competitive concerns.
 
-There is much&nbsp;hubbub&nbsp;around the internet yesterday and today about Groupon's announced IPO. &nbsp;With their <a href="http://sec.gov/Archives/edgar/data/1490281/000104746911005613/a2203913zs-1.htm">public S-1</a>&nbsp;we now have a window into their business, plans, and competitive concerns.<br />
-<br />
-DHH has come out bearish on Groupon, both on <a href="https://twitter.com/#!/dhh">twitter</a>, and then summarized in a <a href="http://shortlogic.tumblr.com/post/6142108636/groupon-ipo-pass-on-this-deal">tumbler post</a>. &nbsp;DHH is&nbsp;relatively&nbsp;bearish on any business that requires funding, as he has successfully built (or helped build) a <a href="http://37signals.com/">business</a>, and an <a href="http://rubyonrails.org/">ecosystem</a>, without splashy VC investments or IPOs. &nbsp;He has some valid points, but many people will dismiss them based on the known bias of the source.<br />
-<br />
-I read through much of the S-1 myself, and have have had two prior experiences consulting with companies with similar models. &nbsp;Both involved selling x dollars for roughly x/2 dollars to be used at a given merchant.<br />
-<br />
-On the face of it, the model should be very&nbsp;profitable. &nbsp;You are essentially selling air (no inventory, no shipping, no fulfillment, etc). &nbsp;You provide value by being an&nbsp;aggregator&nbsp;first, and by tailoring the presentation second.<br />
-<ul><li>Groupon is an aggregator as it has 83 Million subscribers (as of March 31, 2011), and 15.8 Million customers (cumulative as of March 31, 2011). &nbsp;They obviously have a following.&nbsp;</li>
-<li>As they move from the deal a day model to targeted offerings, they are improving their ability to taylor the presentation. &nbsp;Given our technology base today, their abilities here should only improve.</li>
-</ul><div>Selling air should be a great business right? You should have great margins, and since you just run a website, you should be raking in the cash!</div><br />
-<div>Well, they are not. &nbsp;While they have what would appear to be solid gross margins (40%+ in the first quarters of 2010 and 2011), they are still running at a loss. &nbsp;Their big problem appears to be twofold. &nbsp;Their cost to acquire a customer, and their cost to acquire a merchant. &nbsp;Neither of these costs are part of the 'cost of revenue'. </div><br />
-<div>For the 1st Quarter of 2011, here are the highlights:</div><div>(All #s in Millions)</div><div>Revenue: $644</div><div>Cost of Revenue: $374</div><div>Gross Profit: $270 (41%)</div><br />
-<div>At this point, everything looks great. &nbsp;This gross margin has been steady through growth (~45% in 1st Quarter 2010 on much smaller revenue (Q1 2010 was only 6% of the revenue of Q1 2011).</div><br />
-<div>However, the two big scary numbers are:</div><div>Marketing: $208</div><div>Selling, General and Administrative: $178</div><br />
-<div>These two costs alone consume all the margin and then sum, leaving a $116M loss before other operating costs.</div><div><br />
-<div>What do these costs mean?</div><br />
-<div>Cost of Revenue:</div><div><blockquote>Cost of revenue primarily consists of the amounts paid to and accrued for our merchants associated with the sale of Groupons.</blockquote></div><div>Therefore, this margin should always be steady unless they restructure their deals with the merchants.<br />
-<br />
-</div><div>Marketing: Pretty straight forward. &nbsp;They 'buy traffic' via online adds and some offline adds.</div><div><br />
-Selling, General and Administrative:<br />
-<blockquote>Selling, general and administrative expense primarily consists of wages and benefits (including stock-based compensation), credit card processing fees, consulting and professional fees, depreciation and amortization and technology-related costs. Approximately 50% of our employees were part of our salesforce as of March&nbsp;31, 2011, and their compensation represented a significant portion of our selling, general and administrative expenses. Our salesforce is critical to growing and maintaining our merchant base and is the main source for driving new Groupon offers. We expect that our salesforce headcount will continue to grow over time as we continue to expand our business into new markets, but that our sales and marketing expense will decrease as a percentage of revenue.</blockquote></div><div>Essentially, convincing merchants to make offers, and the costs associated with the transactions. &nbsp;50% of their employees are focused on convincing merchants to make offers.</div><br />
-<div>I believe the success or failure of Groupon hinges on one question: &nbsp;Do these costs sale&nbsp;lineally, or will they decrease (as a percentage of revenue) as they scale. &nbsp;IE, once you acquire a customer, do you need to continue&nbsp;marketing&nbsp;to them? &nbsp;Once you acquire a merchant, will they continue to provide regular offerings?</div><br />
-<div>I don't know the answer to these questions. &nbsp;Groupon fans will say they that they are 'scale up' costs and will decrease as a percentage of revenue overtime. Maybe.</div><br />
-<div>I am not a personal fan of Groupon offers (although my wife is, which may really be the reason that I'm not!). &nbsp;To me, they mostly involve convincing me to buy things I would not have otherwise purchased, or purchase them at stores I would not have otherwise shopped at. In the end, this has to be true. &nbsp;Otherwise, the merchants that use Groupon are simply throwing money away. &nbsp;Remember, if you pay $10 for $20 of merchandise/service, the merchant is only getting $5 for that $20. &nbsp;Therefore, they must be getting 'follow on' value, either through additional purchases by you, or indirect marketing (purchases by others because you talked about it, etc.). &nbsp;Because of this, I don't believe that the merchants will be highly&nbsp;sticky. &nbsp;IE, I think the costs to sell offers will continue to be high, as merchants continue to churn through the system.&nbsp;</div><div><br />
-</div><div>On the other hand, I doubt there will be a huge churn in the subscribers. &nbsp;They already have 83 Million, which is an impressive number. &nbsp;But they only have 15 Million customers (still a big number, but less than 20% of subscribers). &nbsp;Also note, the Subscribers are 'as of' March 31, 2011 while the customers are aggregate. &nbsp;It would be&nbsp;interesting&nbsp;to see the number of repeat customers, and the subscriber churn. &nbsp;Searches for 'turnover' and 'repeat' in the S-1 yielded no results.</div><div><br />
-</div><div>With the current IPO market, I'm sure they will get a nice initial IPO pop. &nbsp;People are starved for public tech companies, and there are very few new ones available at this point. &nbsp;But will they become the next Amazon.com, or the next Pets.com? &nbsp;Only time will tell.<br />
-<br />
+DHH has come out bearish on Groupon, both on <a href="https://twitter.com/#!/dhh">twitter</a>, and then summarized in a <a href="http://shortlogic.tumblr.com/post/6142108636/groupon-ipo-pass-on-this-deal">tumbler post</a>. &nbsp;DHH is&nbsp;relatively&nbsp;bearish on any business that requires funding, as he has successfully built (or helped build) a <a href="http://37signals.com/">business</a>, and an <a href="http://rubyonrails.org/">ecosystem</a>, without splashy VC investments or IPOs. &nbsp;He has some valid points, but many people will dismiss them based on the known bias of the source.
+
+I read through much of the S-1 myself, and have have had two prior experiences consulting with companies with similar models. &nbsp;Both involved selling x dollars for roughly x/2 dollars to be used at a given merchant.
+
+On the face of it, the model should be very&nbsp;profitable. &nbsp;You are essentially selling air (no inventory, no shipping, no fulfillment, etc). &nbsp;You provide value by being an&nbsp;aggregator&nbsp;first, and by tailoring the presentation second.
+
+- Groupon is an aggregator as it has 83 Million subscribers (as of March 31, 2011), and 15.8 Million customers (cumulative as of March 31, 2011). &nbsp;They obviously have a following.&nbsp;
+- As they move from the deal a day model to targeted offerings, they are improving their ability to taylor the presentation. &nbsp;Given our technology base today, their abilities here should only improve.
+<div>Selling air should be a great business right? You should have great margins, and since you just run a website, you should be raking in the cash!</div>
+
+<div>Well, they are not. &nbsp;While they have what would appear to be solid gross margins (40%+ in the first quarters of 2010 and 2011), they are still running at a loss. &nbsp;Their big problem appears to be twofold. &nbsp;Their cost to acquire a customer, and their cost to acquire a merchant. &nbsp;Neither of these costs are part of the 'cost of revenue'. </div>
+
+<div>For the 1st Quarter of 2011, here are the highlights:</div><div>(All #s in Millions)</div><div>Revenue: $644</div><div>Cost of Revenue: $374</div><div>Gross Profit: $270 (41%)</div>
+
+<div>At this point, everything looks great. &nbsp;This gross margin has been steady through growth (~45% in 1st Quarter 2010 on much smaller revenue (Q1 2010 was only 6% of the revenue of Q1 2011).</div>
+
+<div>However, the two big scary numbers are:</div><div>Marketing: $208</div><div>Selling, General and Administrative: $178</div>
+
+<div>These two costs alone consume all the margin and then sum, leaving a $116M loss before other operating costs.</div><div>
+
+<div>What do these costs mean?</div>
+
+<div>Cost of Revenue:</div><div><blockquote>Cost of revenue primarily consists of the amounts paid to and accrued for our merchants associated with the sale of Groupons.</blockquote></div><div>Therefore, this margin should always be steady unless they restructure their deals with the merchants.
+
+</div><div>Marketing: Pretty straight forward. &nbsp;They 'buy traffic' via online adds and some offline adds.</div><div>
+
+Selling, General and Administrative:
+
+<blockquote>Selling, general and administrative expense primarily consists of wages and benefits (including stock-based compensation), credit card processing fees, consulting and professional fees, depreciation and amortization and technology-related costs. Approximately 50% of our employees were part of our salesforce as of March&nbsp;31, 2011, and their compensation represented a significant portion of our selling, general and administrative expenses. Our salesforce is critical to growing and maintaining our merchant base and is the main source for driving new Groupon offers. We expect that our salesforce headcount will continue to grow over time as we continue to expand our business into new markets, but that our sales and marketing expense will decrease as a percentage of revenue.</blockquote></div><div>Essentially, convincing merchants to make offers, and the costs associated with the transactions. &nbsp;50% of their employees are focused on convincing merchants to make offers.</div>
+
+<div>I believe the success or failure of Groupon hinges on one question: &nbsp;Do these costs sale&nbsp;lineally, or will they decrease (as a percentage of revenue) as they scale. &nbsp;IE, once you acquire a customer, do you need to continue&nbsp;marketing&nbsp;to them? &nbsp;Once you acquire a merchant, will they continue to provide regular offerings?</div>
+
+<div>I don't know the answer to these questions. &nbsp;Groupon fans will say they that they are 'scale up' costs and will decrease as a percentage of revenue overtime. Maybe.</div>
+
+<div>I am not a personal fan of Groupon offers (although my wife is, which may really be the reason that I'm not!). &nbsp;To me, they mostly involve convincing me to buy things I would not have otherwise purchased, or purchase them at stores I would not have otherwise shopped at. In the end, this has to be true. &nbsp;Otherwise, the merchants that use Groupon are simply throwing money away. &nbsp;Remember, if you pay $10 for $20 of merchandise/service, the merchant is only getting $5 for that $20. &nbsp;Therefore, they must be getting 'follow on' value, either through additional purchases by you, or indirect marketing (purchases by others because you talked about it, etc.). &nbsp;Because of this, I don't believe that the merchants will be highly&nbsp;sticky. &nbsp;IE, I think the costs to sell offers will continue to be high, as merchants continue to churn through the system.&nbsp;</div><div>
+
+</div><div>On the other hand, I doubt there will be a huge churn in the subscribers. &nbsp;They already have 83 Million, which is an impressive number. &nbsp;But they only have 15 Million customers (still a big number, but less than 20% of subscribers). &nbsp;Also note, the Subscribers are 'as of' March 31, 2011 while the customers are aggregate. &nbsp;It would be&nbsp;interesting&nbsp;to see the number of repeat customers, and the subscriber churn. &nbsp;Searches for 'turnover' and 'repeat' in the S-1 yielded no results.</div><div>
+
+</div><div>With the current IPO market, I'm sure they will get a nice initial IPO pop. &nbsp;People are starved for public tech companies, and there are very few new ones available at this point. &nbsp;But will they become the next Amazon.com, or the next Pets.com? &nbsp;Only time will tell.
+
 I wish Groupon well. &nbsp;As a former Chicagoan, and a friend of people who work with or for them, I hope they can prove out that their customer/merchant&nbsp;acquisition&nbsp;costs will reduce and become a profit powerhouse. &nbsp;And we'll see how act 2 (Groupon NOW) and act 3 (?) play out.</div></div>

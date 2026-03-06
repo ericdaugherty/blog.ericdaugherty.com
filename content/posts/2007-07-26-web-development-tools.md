@@ -4,5 +4,22 @@ date: 2007-07-26T15:05:00Z
 url: /2007/07/web-development-tools.html
 draft: false
 ---
+Regardless of what language you use to build your web applications, there are a couple common tenants and tools that I feel are useful.
 
-Regardless of what language you use to build your web applications, there are a couple common tenants and tools that I feel are useful.<br /><br />First, I strongly believe in the idea of permanent URLs.  I agree with pretty much everything this <a href="http://www.w3.org/Provider/Style/URI">W3C article</a> says.  All your URLs should be permanent, obvious, and technology agnostic.  While this isn't strictly a tool, I think it is important for everyone building public websites to at least consider and realize the trade-offs they are making by breaking these guidelines.<br /><br /><a href="http://www.mozilla.com/en-US/">Firefox</a>.  Yes, you should also test in IE, Safari, etc. but Firefox is a great tool for your primary development.  It provides great information out of the box.  Plus, there is a great set of plugins that are very useful:<br /><br /><a href="https://addons.mozilla.org/en-US/firefox/addon/60">Web Developer</a> - It provides great introspection information, and on the fly CSS editing.  The list goes on.  This is a must have.<br /><br /><a href="https://addons.mozilla.org/en-US/firefox/addon/1843">FireBug</a> - A true JavaScript debugger.  Breakpoints, watches, etc.<br /><br /><a href="http://developer.yahoo.com/yslow/">YSlow</a> - A Yahoo add on to FireBug that provides insight on how to improve your page load time.<br /><br /><a href="http://developer.yahoo.com/yslow/">Live HTTP Headers</a> - Watch the HTTP Header information exchanged between the browser and web server.<br /><br /><a href="https://addons.mozilla.org/en-US/firefox/addon/1433">Extended Statusbar</a> - Displays information about how fast a page loads and how big it is.  I've found this one interesting but not critically useful.  Anyone have a better suggestion?<br /><br /><a href="https://addons.mozilla.org/en-US/firefox/addon/271">ColorZilla</a> - Allows you to grab color information from images/pages.<br /><br />Does anyone have any other must have tools?
+First, I strongly believe in the idea of permanent URLs.  I agree with pretty much everything this <a href="http://www.w3.org/Provider/Style/URI">W3C article</a> says.  All your URLs should be permanent, obvious, and technology agnostic.  While this isn't strictly a tool, I think it is important for everyone building public websites to at least consider and realize the trade-offs they are making by breaking these guidelines.
+
+<a href="http://www.mozilla.com/en-US/">Firefox</a>.  Yes, you should also test in IE, Safari, etc. but Firefox is a great tool for your primary development.  It provides great information out of the box.  Plus, there is a great set of plugins that are very useful:
+
+<a href="https://addons.mozilla.org/en-US/firefox/addon/60">Web Developer</a> - It provides great introspection information, and on the fly CSS editing.  The list goes on.  This is a must have.
+
+<a href="https://addons.mozilla.org/en-US/firefox/addon/1843">FireBug</a> - A true JavaScript debugger.  Breakpoints, watches, etc.
+
+<a href="http://developer.yahoo.com/yslow/">YSlow</a> - A Yahoo add on to FireBug that provides insight on how to improve your page load time.
+
+<a href="http://developer.yahoo.com/yslow/">Live HTTP Headers</a> - Watch the HTTP Header information exchanged between the browser and web server.
+
+<a href="https://addons.mozilla.org/en-US/firefox/addon/1433">Extended Statusbar</a> - Displays information about how fast a page loads and how big it is.  I've found this one interesting but not critically useful.  Anyone have a better suggestion?
+
+<a href="https://addons.mozilla.org/en-US/firefox/addon/271">ColorZilla</a> - Allows you to grab color information from images/pages.
+
+Does anyone have any other must have tools?

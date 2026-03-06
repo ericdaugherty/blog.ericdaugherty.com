@@ -4,5 +4,24 @@ date: 2008-10-02T00:52:00.002Z
 url: /2008/10/pictures-at-sunset.html
 draft: false
 ---
+While most of my photography these days consists of chasing my kids around, I do occasionally get an opportunity to play around.  Tonight, after reading more Strobist (<a href="http://strobist.blogspot.com/2008/10/strobeambient-balance-shorthand-way-of.html">Strobe/Ambient Balance</a>) I decided to take some pictures at sunset, using a flash to light the foreground.
 
-While most of my photography these days consists of chasing my kids around, I do occasionally get an opportunity to play around.  Tonight, after reading more Strobist (<a href="http://strobist.blogspot.com/2008/10/strobeambient-balance-shorthand-way-of.html">Strobe/Ambient Balance</a>) I decided to take some pictures at sunset, using a flash to light the foreground.<br /><br />I started with a test picture in Aperture priority mode (my default mode) to determine the correct exposure for the sky.<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="/images/blog/DSC_2549-745934.jpg"><img style="cursor: pointer;" src="/images/blog/DSC_2549-745606.jpg" alt="" border="0" /></a><br /><br />In this case, it was about 1/40 at f/2.8 (ISO 200).  From there I moved to manual mode and locked in the settings.  I then turned on my flash (SB-800) and set it to remote mode.  I set my on-camera flash to Commander mode.  I used TTL mode for the remote flash, with the on camera flash simply triggering the SB-800.  Using the same exposure settings, I fired a test shot.<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="/images/blog/DSC_2552-746522.jpg"><img style="cursor: pointer;" src="/images/blog/DSC_2552-746134.jpg" alt="" border="0" /></a><br /><br />The sky retains the same color and light level, but the tree in the foreground is now lit as well.  I thought it was a bit too much, so I set the TTL level for the remote flash to -1 in the camera's menu.  All the other settings remained the same.<br /><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="/images/blog/DSC_2553-703817.jpg"><img style="cursor: pointer;" src="/images/blog/DSC_2553-703433.jpg" alt="" border="0" /></a><br /><br />I like this shot a little better because it provides more contrast in the foreground tree. <br /><br />This is a very easy setup to pull off.  Simply set your exposure for the background, setup your flash for the foreground, and control the relative exposure of each using the Aperture/Shutter for background and TTL Over/Under exposure for the foreground.<br /><br />I used a Nikon D300 and SB-800 here.  The D300 functions in Remote Commander mode for the flash with TTL, so it is very easy.  You can achieve the same effect with slightly more effort with a D40 or other cameras that don't have Remote Commander mode.<br /><br />Using the D40, I set the on camera flash to manual mode at 1/128 power (or whatever the lowest is).  You can then set the SB-800 to Remote using SU-4 mode.  You have to control the flash exposure manually on the flash, but with a little trial and error you can pull it off.
+I started with a test picture in Aperture priority mode (my default mode) to determine the correct exposure for the sky.
+
+[![](/images/blog/DSC_2549-745606.jpg)](/images/blog/DSC_2549-745934.jpg)
+
+In this case, it was about 1/40 at f/2.8 (ISO 200).  From there I moved to manual mode and locked in the settings.  I then turned on my flash (SB-800) and set it to remote mode.  I set my on-camera flash to Commander mode.  I used TTL mode for the remote flash, with the on camera flash simply triggering the SB-800.  Using the same exposure settings, I fired a test shot.
+
+[![](/images/blog/DSC_2552-746134.jpg)](/images/blog/DSC_2552-746522.jpg)
+
+The sky retains the same color and light level, but the tree in the foreground is now lit as well.  I thought it was a bit too much, so I set the TTL level for the remote flash to -1 in the camera's menu.  All the other settings remained the same.
+
+[![](/images/blog/DSC_2553-703433.jpg)](/images/blog/DSC_2553-703817.jpg)
+
+I like this shot a little better because it provides more contrast in the foreground tree.
+
+This is a very easy setup to pull off.  Simply set your exposure for the background, setup your flash for the foreground, and control the relative exposure of each using the Aperture/Shutter for background and TTL Over/Under exposure for the foreground.
+
+I used a Nikon D300 and SB-800 here.  The D300 functions in Remote Commander mode for the flash with TTL, so it is very easy.  You can achieve the same effect with slightly more effort with a D40 or other cameras that don't have Remote Commander mode.
+
+Using the D40, I set the on camera flash to manual mode at 1/128 power (or whatever the lowest is).  You can then set the SB-800 to Remote using SU-4 mode.  You have to control the flash exposure manually on the flash, but with a little trial and error you can pull it off.
