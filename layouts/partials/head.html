@@ -5,6 +5,7 @@
 {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
+<link rel="canonical" href="{{ .Permalink }}">
 <link rel="icon" href="/favicon.ico">
 <script async data-goatcounter="https://bedcom.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
 <!-- Google tag (gtag.js) -->
